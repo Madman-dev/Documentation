@@ -7,19 +7,38 @@
 
  Create a dictionary `paces` of type [String: Double] and assign it a dictionary literal with "Easy", "Medium", and "Fast" keys corresponding to values of 10.0, 8.0, and 6.0. These numbers correspond to mile pace in minutes. Print the dictionary.
  */
-
-
+var paces: [String: Double] = ["Easy": 10.0, "Medium": 8.0, "Fast": 6.0]
+print(paces)
 //:  Add a new key/value pair to the dictionary. The key should be "Sprint" and the value should be 4.0. Print the dictionary.
-
-
+paces["Sprint"] = 4.0   // 속에 집어 넣을때는 array 구성으로 해야하는 점!! 꼭 기억해!!
+print(paces)
 //:  Imagine the user in question gets faster over time and decides to update his/her pacing on runs. Update the values of "Medium" and "Fast" to 7.5 and 5.8, respectively. Print the dictionary.
+paces.updateValue(7.5, forKey: "Medium")
+paces.updateValue(5.8, forKey: "Fast")
 
-
+paces["Fast"] = 4.0     /// 이렇게도 변경이 가능하다 -> updating && adding new values
+//paces["slow"] = 1.0
+print(paces)
 //:  Imagine the user in question decides not to store "Sprint" as one his/her regular paces. Remove "Sprint" from the dictionary. Print the dictionary.
-
+paces.removeValue(forKey: "Sprint")
+print(paces)
 
 //:  When a user chooses a pace, you want the app to print a statement stating that it will keep him/her on pace. Imagine a user chooses "Medium." Accessing the value from the dictionary, print a statement saying "Okay! I'll keep you at a <INSERT PACE VALUE HERE> minute mile pace."
+//let userChoice = paces
+//
+//if userChoice == paces[2] {
+//    print("Okay! I'll keep you at a \(userChoice) minute mile pace")
+//}
 
+/// ⭐️ 내가 했던 방식이 맞기는 했지만, 접근을 할 때 index 번호로 접근을 하는게 아니라 Key 값을 넣어서 value 값을 출력 받는 것
+if let pace = paces["Medium"] {
+    print("Okay! I'll keep you at a \(pace) minute mile pace")
+}
+
+/// 반대로 value 값을 넣어서 찾을 수는 없네!
+//if let test = paces[4.0] {
+//    print("되나?")
+//}
 
 /*:
  _Copyright © 2021 Apple Inc._
