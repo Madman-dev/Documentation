@@ -29,18 +29,23 @@ class ViewController: UIViewController {
     
     func newRound() {
         let newWord = listOfWords.removeFirst()
-        currentGame = Game(word: newWord, numberOfTurns: incorrectMovesAllowed)
+        currentGame = Game(word: newWord, numberOfTurns: incorrectMovesAllowed, guessedLetters: [])     /// 아예 새롭게 받아야 하니까 guessedLetter는 [] 비어두는 것
         updateUI()
     }
     
     func updateUI() {
         scoreLabel.text = "Wins: \(totalWins), Losses: \(totalLosses)"
         treeImageView.image = UIImage(named: "Tree \(currentGame.numberOfTurns)")   // 오... 이렇게도 이미지 즉각 변경이 가능해?
+        correctWordLabel.text = currentGame.formattedWord   // 여기서 접근하는게 이렇게 되는거구나
     }
 
     @IBAction func letterButtonPressed(_ sender: UIButton) {
         sender.isEnabled = false
+//        listOfWords.first?.contains(sender!)
+        let letterString = sender.title(for: .normal)!
+        let letter = Character(letterString.lowercased())   // 오... 신기한데
+        currentGame.playerGuessed(letter: letter)
+        updateUI()
     }
-    
 }
 
