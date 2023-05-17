@@ -22,7 +22,6 @@ let oldHR2 = 76
 let oldHR3 = 79
 let oldHR4 = 70
 
-
 if let hr = heartRate {
     let hrAverage = (oldHR1 + oldHR2 + oldHR3 + oldHR4 + hr) / 5
     print(hrAverage)

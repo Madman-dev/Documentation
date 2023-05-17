@@ -26,7 +26,6 @@ print(userAge)
 print(userAge!)
 //:  Now use optional binding to unwrap `userAge`. If `userAge` has a value, print it to the console.
 
-
 if let age = userAge {
     print(age)
 }

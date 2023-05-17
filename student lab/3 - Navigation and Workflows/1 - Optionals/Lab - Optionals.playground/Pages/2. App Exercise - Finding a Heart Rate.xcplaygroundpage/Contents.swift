@@ -7,10 +7,12 @@
 
  Declare a variable `heartRate` of type `Int?` and set it to `nil`. Print the value.
  */
-
+var heartRate: Int? = nil
+print(heartRate)
 
 //:  In this example, if the user fixes the positioning of the heart rate monitor, the app may get a proper heart rate reading. Below, update the value of `heartRate` to 74. Print the value.
-
+heartRate = 74
+print(heartRate)
 
 //:  As you've done in other app exercises, create a variable `hrAverage` of type `Int` and use the values stored below and the value of `heartRate` to calculate an average heart rate.
 let oldHR1 = 80
@@ -18,6 +20,25 @@ let oldHR2 = 76
 let oldHR3 = 79
 let oldHR4 = 70
 
+var hrAverage: Int
+
+/// 이걸 이렇게 해야한다니... 생각지도 못했어 -> heartRate 변수 값은 현재 optional 타입, 그렇기에 해당 변수를 사용하기 위해서는 if let binding을 해야했음!
+
+var hrAverageTwo: Int
+
+if let new = heartRate {
+    let hrAverageTwo = (oldHR1 + oldHR2 + oldHR3 + oldHR4 + new)/5
+    print(hrAverageTwo)
+}
+
+///
+if let hr = heartRate {
+    let hrAverage = (oldHR1 + oldHR2 + oldHR3 + oldHR4 + hr)/5
+    print(hrAverage)
+} else {
+    let hrAverage = (oldHR1 + oldHR2 + oldHR3 + oldHR4)/4
+    print(hrAverage)
+}
 
 /*:
  If you didn't unwrap the value of `heartRate`, you've probably noticed that you cannot perform mathematical operations on an optional value. You will first need to unwrap `heartRate`.
