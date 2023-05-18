@@ -43,11 +43,30 @@ var workouts: [Workout] = [
     Run(cadence: 90, time: 358.9, distance: 1600)
 ]
 //:  Write simple functions called `describeRun(runningWorkout:)` and `describeSwim(swimmingWorkout:)` that take a `Run` object and a `Swim` object, respectively. Neither should return values. Each function should print a description of the workout, including the run's cadence or the swim's stroke. Time is represented in seconds, distance is represented in meters, and cadence is represented in steps per minute.
- 
+func describeRun(runningWorkout: Run) {
+    print("Running has cadence of \(runningWorkout.cadence).")
+}
+
+func describeSwim(swimmingWorkOut: Swim) {
+    print("To be good at swimming, you need strokes of atleast \(swimmingWorkOut.stroke)")
+}
+
+//describeRun(runningWorkout: )
+/// 그냥 만들기만 하는거야??? 뭔데
+
 
 //:  Now loop through each workout in `workouts` and, using type casting, call either `describeRun(runningWorkout:)` or `describeSwim(swimmingWorkout:)` on each. Observe what is printed to the console.
- 
+for workout in workouts {
+    if let training = workout as? Run {
+        describeRun(runningWorkout: training)
+    } else if let swim = workout as? Swim {
+        describeSwim(swimmingWorkOut: swim)
+    }
+}
 
+
+/// typeCasting을 하기 위해서는 '='을 써야한다
+/// 
 /*:
  _Copyright © 2021 Apple Inc._
 

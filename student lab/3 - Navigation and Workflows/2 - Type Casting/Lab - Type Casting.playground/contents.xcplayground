@@ -3,5 +3,6 @@
     <pages>
         <page name='1. Exercise - Type Casting and Inspection'/>
         <page name='2. App Exercise - Workout Types'/>
+        <page name='Personal'/>
     </pages>
 </playground>
