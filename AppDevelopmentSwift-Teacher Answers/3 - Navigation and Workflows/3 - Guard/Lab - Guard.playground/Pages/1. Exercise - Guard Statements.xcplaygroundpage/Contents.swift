@@ -59,7 +59,7 @@ func createUser() -> User? {
 }
 //:  Call the function you made above and capture the return value. Unwrap the `User` with standard optional binding and print a statement using each of its properties.
 
-
+/// 상수에 함수를 담아서 실행할 수도 있구나 -> 값은 어떻ㄱ ㅔ
 let aUser = createUser()
 if let user = aUser {
     print("\(user.firstName) \(user.lastName) is \(user.age).")
