@@ -24,6 +24,9 @@ print("The above code compiles differently since the variable lives outside the 
 
 //:  In the body of the function `greeting` below, use variable shadowing when unwrapping `greeting`. If `greeting` is successfully unwrapped, print a statement that uses the given greeting to greet the given name (i.e. if `greeting` successfully unwraps to have the value "Hi there" and `name` is `Sara`, print "Hi there, Sara."). Otherwise, use "Hello" to print a statement greeting the given name. Call the function twice, once passing in a value for greeting, and once passing in `nil`.
 func greeting(greeting: String?, name: String) {
+//    guard let greeting = greeting else { return "Hello \(name)"}
+//    return ("\(greeting) to newest member, \(name)")
+    
     if let greeting = greeting {
         print("\(greeting) to our newest member, \(name)")
     } else {
