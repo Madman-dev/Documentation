@@ -54,7 +54,7 @@ func createUser() -> User? {
 
 
 //:  Call the function you made above and capture the return value. Unwrap the `User` with standard optional binding and print a statement using each of its properties.
-🙋🏻‍♂️
+
 let newUser = createUser()
 if let user = newUser {
     print("\(user.firstName), \(user.lastName), \(user.age)")
