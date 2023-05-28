@@ -16,25 +16,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zf6-Lr-9KL">
-                                <rect key="frame" x="167.66666666666666" y="411" width="58" height="30"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Move To"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5uK-LJ-J9m">
+                                <rect key="frame" x="45" y="361" width="135" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Push to Yellow"/>
                                 <connections>
-                                    <segue destination="sua-u2-6Fm" kind="show" id="r1p-PF-Sln"/>
+                                    <segue destination="sua-u2-6Fm" kind="show" identifier="Yellow" id="RCR-mi-G5b"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vII-Lv-LpS">
+                                <rect key="frame" x="172" y="485" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lDF-fO-bPI">
+                                <rect key="frame" x="225" y="361" width="132" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Push to Green"/>
+                                <connections>
+                                    <segue destination="6cF-BN-gK6" kind="show" identifier="Green" id="zUb-YH-CF2"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemRedColor"/>
-                        <constraints>
-                            <constraint firstItem="Zf6-Lr-9KL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fml-Gt-JjT"/>
-                            <constraint firstItem="Zf6-Lr-9KL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pic-vI-TvK"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="RED" largeTitleDisplayMode="always" id="Hm3-8O-QWP">
                         <barButtonItem key="backBarButtonItem" title="Go to Red" id="zjM-5W-8ar"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="segueSwitch" destination="vII-Lv-LpS" id="tf7-jA-Xik"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -47,28 +60,14 @@
                     <view key="view" contentMode="scaleToFill" id="OhZ-gR-rGU">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOW-Wo-5Mx">
-                                <rect key="frame" x="180.66666666666666" y="411" width="32" height="30"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Next"/>
-                                <connections>
-                                    <segue destination="6cF-BN-gK6" kind="show" id="577-0R-Hvu"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="7A9-uk-lV1"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
-                        <constraints>
-                            <constraint firstItem="eOW-Wo-5Mx" firstAttribute="centerX" secondItem="OhZ-gR-rGU" secondAttribute="centerX" id="PjB-ov-h0R"/>
-                            <constraint firstItem="eOW-Wo-5Mx" firstAttribute="centerY" secondItem="OhZ-gR-rGU" secondAttribute="centerY" id="vwn-8d-RUP"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Yellow" largeTitleDisplayMode="always" id="iQ6-rG-mQx"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bn9-xt-GR3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2532.06106870229" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="2555" y="-427"/>
         </scene>
         <!--Green-->
         <scene sceneID="sNw-wD-5oE">
@@ -77,31 +76,16 @@
                     <view key="view" contentMode="scaleToFill" id="qkZ-cC-Er1">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QPS-ic-9yu">
-                                <rect key="frame" x="175.66666666666666" y="411" width="42" height="30"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="return"/>
-                                <connections>
-                                    <segue destination="cMn-iO-6Wd" kind="unwind" unwindAction="unwindToRedWithUnwindSegue:" id="0wT-E0-jEm"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="qGZ-zL-n3f"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
-                        <constraints>
-                            <constraint firstItem="QPS-ic-9yu" firstAttribute="centerX" secondItem="qkZ-cC-Er1" secondAttribute="centerX" id="EJS-aa-VEF"/>
-                            <constraint firstItem="QPS-ic-9yu" firstAttribute="centerY" secondItem="qkZ-cC-Er1" secondAttribute="centerY" id="SqP-VE-DM1"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Green" largeTitleDisplayMode="never" id="tt2-oJ-TFe">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ekt-4V-hpr"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XU3-6F-8R5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="cMn-iO-6Wd" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3263.3587786259541" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="2555" y="318"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0Lb-ii-yyf">

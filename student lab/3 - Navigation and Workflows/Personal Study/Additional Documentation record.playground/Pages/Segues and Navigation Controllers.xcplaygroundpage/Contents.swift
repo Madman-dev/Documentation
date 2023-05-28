@@ -27,6 +27,16 @@ import Foundation
  ㄴ navigation controller에서 prefer large title로 지정하면 모든 값이 변함 -> viewController 별로 개별 값을 지정할 수 있음
  
  
+ 🙋🏻‍♂️ navigation controller를 사용했으면 root view Controller도 navigation Controller로 지정이 되는거야?
+ 
+ 
+ //MARK: - Passing Data / information
+ 
+ - segue가 이뤄지기 전에 데이터를 먼저 viewController로부터 넘겨야 한다.
+ 
+ 
+ 
+ 
  
  
 */
