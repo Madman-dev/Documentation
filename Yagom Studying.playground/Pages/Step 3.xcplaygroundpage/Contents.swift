@@ -10,44 +10,36 @@ import Foundation
 let myLottoNumbers: Set<Int> = [1, 2, 3, 4, 5, 6]
 //let myLottoNumbers: Dictionary<String, [Int]> = ["1회차": [1, 2, 3, 4, 5, 6]]
 // dictionary는 <,> =. [:]으로 선언이 된다
-var numberDrawn: Set<Int> = []
-
+//var numberDrawn: Set<Int> = [] >> 전역 변수로 설정했기 때문에 교체가 되지 않고 있었다?
 
 func generateLotto() -> Set<Int> {
+    var numberDrawn: Set<Int> = []
+    
     repeat {
         let pickedNumber = Int.random(in: 1...45)
         numberDrawn.insert(pickedNumber)
+//        return numberDrawn
     } while numberDrawn.count != myLottoNumbers.count
     return numberDrawn
 }
 
 
-//func checkWinner() {
-//    let matchingNumbers = myLottoNumbers.intersection(numberDrawn)
-//    if matchingNumbers.count == 0 {
-//        print("아쉽지만 겹치는 번호가 없습니다.")
-//    } else {
-//        let matchingNumber = matchingNumbers.sorted()
-//            .map{String($0)}.joined(separator: ", ")
-//        print("축하합니다! 겹치는 번호는 \(matchingNumber) 입니다!")
-//    }
-//}
-
-func savePreviousWinners(andFind previousDraws: Int?) {
-    var saveWinners = [Int: Any]()
+func saveWinners(andFind previousDraws: Int?) {
+    var saveWinners = [Int: [Int]]()
     guard let previousDraws = previousDraws else { return }
+    
     for draw in 1...previousDraws {
-        
-        generateLotto()
+        let numberDrawn = generateLotto() // 이렇게 해두면 어떻게 되는거지? -> 함수를 실행하고 발생하는 값을 저장할 수 있게 되는 것
         let newNumber: [Int] = Array(numberDrawn)
-//        saveWinners[draw] = newNumber
+        saveWinners[draw] = newNumber
+        
 //        let oldValue = saveWinners.updateValue(newNumber, forKey: draw)
-        print(newNumber)
+        print("\(draw)회차: \(newNumber)")
     }
-    print(saveWinners.keys)
+//    print(saveWinners.keys)
 }
 
-savePreviousWinners(andFind: 20)
+saveWinners(andFind: 5)
 
 
 //MARK: - 1차 try
