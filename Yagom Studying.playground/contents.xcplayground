@@ -18,12 +18,7 @@
         <page name='18. Optional'/>
         <page name='19. optional binding'/>
         <page name='20. compile time &amp;&amp; Run time'/>
-        <page name='Step 3'/>
-        <page name='21. Type'/>
-        <page name='22. Instance'/>
-        <page name='23. Instance'/>
         <page name='guard문'/>
         <page name='Class - 개인 공부'/>
-        <page name='Testing Page'/>
     </pages>
 </playground>
