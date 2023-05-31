@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='macos' display-mode='raw' buildActiveScheme='true' importAppTypes='true'>
+    <pages>
+        <page name='07. 문자열 보간법 &amp;&amp; print 함수'/>
+        <page name='08. 변수, 상수, 이름짓기 '/>
+        <page name='09. 코드의 흐름 표현하기'/>
+        <page name='Step 2 아이스크림 그리기'/>
+        <page name='11. Any, AnyObject, Nil'/>
+        <page name='10. 데이터 타입'/>
+        <page name='12. 고급 함수'/>
+        <page name='ThirdStep_study'/>
+        <page name='13. Collection'/>
+        <page name='14. 반복문 고급'/>
+        <page name='15. 논리연산자'/>
+        <page name='16. 열거형_enum'/>
+        <page name='17. if else 조건문'/>
+        <page name='step 2 lotto'/>
+        <page name='18. Optional'/>
+        <page name='19. optional binding'/>
+        <page name='20. compile time &amp;&amp; Run time'/>
+        <page name='Step 3'/>
+        <page name='21. Type'/>
+        <page name='22. Instance'/>
+        <page name='23. Instance'/>
+        <page name='guard문'/>
+        <page name='Class - 개인 공부'/>
+        <page name='Testing Page'/>
+    </pages>
+</playground>
