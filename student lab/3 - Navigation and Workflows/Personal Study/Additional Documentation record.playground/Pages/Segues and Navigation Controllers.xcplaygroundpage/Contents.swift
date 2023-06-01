@@ -33,12 +33,9 @@ import Foundation
  //MARK: - Passing Data / information
  
  - segue가 이뤄지기 전에 데이터를 먼저 viewController로부터 넘겨야 한다.
+ - first ViewController에서 전달하고 싶은 데이터(터치 값, 입력 값 (search)) 이런 거를 segue를 통해 second viewController로 전달 할 수 있다
  
- 
- 
- 
- 
- 
+    ㄴ 사용하는 키워드는 prepare, perform으로, 이 둘의 차이는 한번 더 찾아보자! ⭐️
 */
  
 //: [Next](@next)
