@@ -3,6 +3,6 @@
     <pages>
         <page name='Segues and Navigation Controllers'/>
         <page name='Tab Bar Controller'/>
-        <page name='viewControllerLifeCycle'/>
+        <page name='Building Simple Workflows'/>
     </pages>
 </playground>
