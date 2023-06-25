@@ -23,7 +23,5 @@ class RedViewController: UIViewController {
         // 탭을 떠나는 순간 없어지는구나 -> 지금도 Red만 구현 - orange는 다른 viewController이니까~
         tabBarItem.badgeValue = nil
     }
-
-
 }
 
