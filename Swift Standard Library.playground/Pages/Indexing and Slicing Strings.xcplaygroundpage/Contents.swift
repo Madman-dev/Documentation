@@ -3,8 +3,8 @@
 Here's what it looks like when you plot the string's characters against their user-perceived indices. Notice that even though the flag (🇺🇸) is actually a grapheme cluster made up of two combining Unicode scalars, Swift counts the flag as just one user-perceived character. This makes tasks like form validation, cursor positioning, and text wrapping much simpler to implement. Counting, indexing, and slicing are all based on user-perceived character indices, rather than the layout of the string in memory.
 */
 visualize(str)
-//str = "Hi Hi 🇰🇷 is the 👍🏻estest Country in the 🌏"
-//visualize(str)
+str = "Hi Hi 🇰🇷 is the 👍🏻estest Country in the 🌏"
+visualize(str)
 /*:
 
 - Experiment: Try changing the `str` variable and see how the string visualizations in the playground change. You can add special characters by placing your cursor inside the string and going to Edit > Emoji & Symbols in the menu bar.
