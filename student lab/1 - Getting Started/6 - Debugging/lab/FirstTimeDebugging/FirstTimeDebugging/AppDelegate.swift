@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         var testArray: [String] = ["Uh oh..."]
         testArray.removeFirst()
-        testArray.removeFirst()
+//        testArray.removeFirst()   //  최초 Array 값을 제거한 이후 담긴 값이 없다는 점. 따라서 removeFirst가 진행되기 어렵다는 점
         return true
     }
 
